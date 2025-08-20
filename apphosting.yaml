@@ -1,0 +1,15 @@
+# Settings to manage and configure a Firebase App Hosting backend.
+# https://firebase.google.com/docs/app-hosting/configure
+
+runConfig:
+  # Increase this value if you'd like to automatically spin up
+  # more instances in response to increased traffic.
+  maxInstances: 1
+
+env:
+  # This secret needs to be created in Google Cloud Secret Manager
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    secret: firebase-api-key-secret
+  # This secret is for the Gemini API Key and needs to be created in Google Cloud Secret Manager
+  - variable: GEMINI_API_KEY
+    secret: gemini-api-key-secret
